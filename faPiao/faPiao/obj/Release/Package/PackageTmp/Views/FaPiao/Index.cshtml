@@ -1,0 +1,370 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <input type="hidden" id="timestamp" value="@ViewData["timestamp"]" />
+    @*时间戳*@
+    <input type="hidden" id="nonceStr" value="@ViewData["nonceStr"]" />
+    @*随机字符串*@
+    <input type="hidden" id="signature" value="@ViewData["signature"]" />
+    @*签名*@
+    <input type="hidden" id="jsapi_ticket" value="@ViewData["jsapi_ticket"]" />
+    <input type="hidden" id="url" value="@ViewData["url"]" />
+    @*页面地址*@
+    <input type="hidden" id="access_token" value="@ViewData["access_token"]" />
+    <div style="width: 100%">
+        <span onclick="TYPJShiBie()">通用票据识别</span>
+        </br>
+        <span onclick="ZZSShiBie()">增值税发票识别</span>
+        </br>
+        <span onclick="HCPShiBie()">火车票识别</span>
+        </br>
+        <span onclick="CZCPShiBie()">出租车票识别</span>
+        </br>
+        <span onclick="DEFPShiBie()">定额发票识别</span>
+        </br>
+        <span onclick="TYJDShiBie()">通用机打发票识别</span>
+        </br>
+        <span onclick="FJXCDShiBie()">飞机行程单识别</span>
+        </br>
+        <span onclick="HHFPShiBie()">混合发票识别</span>
+        </br>
+        <span onclick="PDFShiBie()">PDF识别</span>
+        </br>
+        <span onclick="SFZShiBie()">身份证识别</span>
+        </br>
+        <span onclick="FaceAdd()">人脸录入</span>
+        </br>
+        <span onclick="FaceDelete()">人脸删除</span>
+        </br>
+        <span onclick="FaceJianCe()">人脸检测</span>
+        </br>
+        <span onclick="FaceSearch()">人脸搜索</span>
+        </br>
+        <span onclick="PersonVerify()">身份验证</span>
+        </br>
+        <span onclick="videoFace()">视频活体检测</span>
+        </br>
+        <span onclick="similarAdd()">相似图入库</span>
+        </br>
+        <span onclick="similarSearch()">相似图搜索</span>
+        </br>
+        <span onclick="similarDelete()">相似图删除</span>
+        </br>
+        <span>发票信息：</span>
+        </br>
+        <textarea id="FanHui" style="width: 80%; height: 400px">
+        </textarea>
+        <button type="button" class="aui-btn aui-btn-info aui-margin-r-5" onclick="uploadVideo('video')">
+            上传视频</button>
+        <button type="button" class="aui-btn aui-btn-info aui-margin-r-5" onclick="upload('img1Tu')">
+            上传照片</button>
+    </div>
+    <script src="~/Scripts/jweixin-1.2.0.js"></script>
+    <script type="text/javascript">
+        wx.config({
+            beta: true,
+            debug: false,
+            appId: 'ww193a453e5045498a',//必填，公众号的唯一标识 
+            timestamp: $("#timestamp").val(),// 必填，生成签名的时间戳
+            nonceStr: $("#nonceStr").val(),// 必填，生成签名的随机串
+            signature: $("#signature").val(),// 必填，签名，见附录1
+            jsApiList: [
+            'chooseImage',
+            'uploadImage',
+            'chooseVideo',
+            'uploadFile'
+            ],
+            success: function (res) {
+                // 回调
+            },
+            fail: function (res) {
+                if (res.errMsg.indexOf('function not exist') > -1) {
+                    alert('版本过低请升级')
+                }
+            }
+        });
+        function uploadVideo(data) {
+            wx.chooseVideo({
+                sourceType: ['album', 'camera'],
+                maxDuration: 60,
+                camera: 'back',
+                success: function (res) {
+                    alert(res)
+                    alert(res.tempFilePath)
+                }
+            })
+        }
+        function upload(data) {
+            wx.chooseImage({
+                sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    alert(res.localIds)
+                },
+                error: function (msg) {
+                    alert(msg);
+                }
+            });
+        }
+        //通用票据识别
+        function TYPJShiBie() {
+            $.ajax({
+                url: "/FaPiao/receipt",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //增值税发票识别
+        function ZZSShiBie() {
+            $.ajax({
+                url: "/FaPiao/vatInvoice",
+                type: "post",
+                data: {
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //火车票识别
+        function HCPShiBie() {
+            $.ajax({
+                url: "/FaPiao/trainTicket",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //出租车票识别
+        function CZCPShiBie() {
+            $.ajax({
+                url: "/FaPiao/taxiReceipt",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //定额发票识别
+        function DEFPShiBie() {
+            $.ajax({
+                url: "/FaPiao/quotaInvoice",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //通用机打发票识别
+        function TYJDShiBie() {
+            $.ajax({
+                url: "/FaPiao/invoice",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //飞机行程单识别
+        function FJXCDShiBie() {
+            $.ajax({
+                url: "/FaPiao/airTicket",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+
+        //混合发票识别
+        function HHFPShiBie() {
+            $.ajax({
+                url: "/FaPiao/PostHttp",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+
+        //PDF识别
+        function PDFShiBie() {
+            $.ajax({
+                url: "/FaPiao/PDFShiBie",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+
+        //身份证识别
+        function SFZShiBie() {
+            $.ajax({
+                url: "/FaPiao/idcard",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //人脸录入
+        function FaceAdd() {
+            $.ajax({
+                url: "/FaPiao/add",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //人脸删除
+        function FaceDelete() {
+            $.ajax({
+                url: "/FaPiao/FaceDelete",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //人脸检测
+        function FaceJianCe() {
+            $.ajax({
+                url: "/FaPiao/DetectDemo",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //人脸搜索
+        function FaceSearch() {
+            $.ajax({
+                url: "/FaPiao/faceSearch",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //身份验证
+        function PersonVerify() {
+            $.ajax({
+                url: "/FaPiao/PersonVerify",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //视频活体检测
+        function videoFace() {
+            $.ajax({
+                url: "/FaPiao/videoFace",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //相似图入库
+        function similarAdd() {
+            $.ajax({
+                url: "/FaPiao/similarAdd",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //相似图搜索
+        function similarSearch() {
+            $.ajax({
+                url: "/FaPiao/similarSearch",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        //相似图删除
+        function similarDelete() {
+            $.ajax({
+                url: "/FaPiao/similarDelete",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+    </script>
+</body>
+</html>

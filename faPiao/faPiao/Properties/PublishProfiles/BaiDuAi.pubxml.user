@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AipSdk.dll">
+      <publishTime>04/17/2019 10:42:13</publishTime>
+    </File>
+    <File Include="bin/faPiao.dll">
+      <publishTime>08/04/2021 13:37:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/17/2019 10:42:13</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/27/2021 09:44:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/27/2021 09:44:24</publishTime>
+    </File>
+    <File Include="Image/1.jpg">
+      <publishTime>07/28/2021 15:18:30</publishTime>
+    </File>
+    <File Include="Image/2.jpg">
+      <publishTime>07/28/2021 15:20:13</publishTime>
+    </File>
+    <File Include="Image/3.jpg">
+      <publishTime>07/28/2021 15:23:57</publishTime>
+    </File>
+    <File Include="Image/仲荧1.jpg">
+      <publishTime>07/31/2021 15:57:22</publishTime>
+    </File>
+    <File Include="Image/出生证明.png">
+      <publishTime>07/28/2021 11:42:47</publishTime>
+    </File>
+    <File Include="Image/出租车票1.jpg">
+      <publishTime>07/27/2021 13:17:10</publishTime>
+    </File>
+    <File Include="Image/图片1.jpg">
+      <publishTime>08/03/2021 16:15:58</publishTime>
+    </File>
+    <File Include="Image/图片2.jpg">
+      <publishTime>08/03/2021 16:15:58</publishTime>
+    </File>
+    <File Include="Image/坑槽2.jpg">
+      <publishTime>08/02/2021 10:20:23</publishTime>
+    </File>
+    <File Include="Image/坑槽3.jpg">
+      <publishTime>08/02/2021 10:20:40</publishTime>
+    </File>
+    <File Include="Image/坑槽4.jpg">
+      <publishTime>08/02/2021 10:21:29</publishTime>
+    </File>
+    <File Include="Image/坑槽5.jpg">
+      <publishTime>08/02/2021 10:21:43</publishTime>
+    </File>
+    <File Include="Image/增值税1.jpg">
+      <publishTime>07/27/2021 10:39:55</publishTime>
+    </File>
+    <File Include="Image/定额发票.png">
+      <publishTime>07/27/2021 13:24:05</publishTime>
+    </File>
+    <File Include="Image/小铃铛1.jpg">
+      <publishTime>08/01/2021 21:39:46</publishTime>
+    </File>
+    <File Include="Image/崔伟铭1.jpg">
+      <publishTime>07/31/2021 15:25:33</publishTime>
+    </File>
+    <File Include="Image/崔伟铭2.jpg">
+      <publishTime>07/31/2021 15:25:33</publishTime>
+    </File>
+    <File Include="Image/张文凭1.jpg">
+      <publishTime>07/31/2021 15:25:34</publishTime>
+    </File>
+    <File Include="Image/张文凭2.jpg">
+      <publishTime>07/31/2021 15:24:22</publishTime>
+    </File>
+    <File Include="Image/张鑫1.png">
+      <publishTime>08/02/2021 15:04:01</publishTime>
+    </File>
+    <File Include="Image/文字1.png">
+      <publishTime>07/28/2021 11:24:55</publishTime>
+    </File>
+    <File Include="Image/江苏省新型冠状病毒感染肺炎疫情防控工作领导小组交通防控组关于转发公路服务区和收费站新冠肺炎疫情防控工作指南和有序做好春运期间群众出行核酸检测工作的通知.pdf">
+      <publishTime>07/31/2021 09:07:06</publishTime>
+    </File>
+    <File Include="Image/测试1.jpg">
+      <publishTime>07/28/2021 13:23:09</publishTime>
+    </File>
+    <File Include="Image/混合1.png">
+      <publishTime>07/28/2021 13:56:41</publishTime>
+    </File>
+    <File Include="Image/混合2.png">
+      <publishTime>07/28/2021 14:39:28</publishTime>
+    </File>
+    <File Include="Image/混合3.png">
+      <publishTime>07/28/2021 14:42:16</publishTime>
+    </File>
+    <File Include="Image/混合4.png">
+      <publishTime>07/28/2021 14:46:40</publishTime>
+    </File>
+    <File Include="Image/混合6.jpg">
+      <publishTime>07/28/2021 15:05:09</publishTime>
+    </File>
+    <File Include="Image/混合7.jpg">
+      <publishTime>07/28/2021 15:16:30</publishTime>
+    </File>
+    <File Include="Image/火车票.png">
+      <publishTime>07/27/2021 13:12:52</publishTime>
+    </File>
+    <File Include="Image/申松1.jpg">
+      <publishTime>07/31/2021 15:17:01</publishTime>
+    </File>
+    <File Include="Image/申松2.jpg">
+      <publishTime>07/31/2021 15:16:47</publishTime>
+    </File>
+    <File Include="Image/申松3.png">
+      <publishTime>08/02/2021 15:01:35</publishTime>
+    </File>
+    <File Include="Image/组合.jpg">
+      <publishTime>07/27/2021 14:42:46</publishTime>
+    </File>
+    <File Include="Image/苏交投[2020]12关于印发《苏州市管高速公路收费站疫情防控工作指南》的通知.pdf">
+      <publishTime>07/31/2021 09:04:36</publishTime>
+    </File>
+    <File Include="Image/表格1.png">
+      <publishTime>07/28/2021 11:32:50</publishTime>
+    </File>
+    <File Include="Image/视频1.MP4">
+      <publishTime>08/03/2021 09:53:58</publishTime>
+    </File>
+    <File Include="Image/视频2.MP4">
+      <publishTime>08/03/2021 13:00:36</publishTime>
+    </File>
+    <File Include="Image/视频3.MP4">
+      <publishTime>08/03/2021 13:00:27</publishTime>
+    </File>
+    <File Include="Image/视频4.MP4">
+      <publishTime>08/03/2021 13:08:35</publishTime>
+    </File>
+    <File Include="Image/视频5.MP4">
+      <publishTime>08/03/2021 13:10:20</publishTime>
+    </File>
+    <File Include="Image/视频6.MP4">
+      <publishTime>08/03/2021 13:12:00</publishTime>
+    </File>
+    <File Include="Image/身份证.jpg">
+      <publishTime>07/31/2021 14:48:07</publishTime>
+    </File>
+    <File Include="Image/身份证2.jpg">
+      <publishTime>07/31/2021 14:53:15</publishTime>
+    </File>
+    <File Include="Image/通用发票.png">
+      <publishTime>07/27/2021 13:45:25</publishTime>
+    </File>
+    <File Include="Image/通用机打发票.png">
+      <publishTime>07/27/2021 13:31:51</publishTime>
+    </File>
+    <File Include="Image/飞机行程单.jpg">
+      <publishTime>07/27/2021 13:39:59</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/27/2021 09:44:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.min.js">
+      <publishTime>05/23/2020 13:16:48</publishTime>
+    </File>
+    <File Include="Scripts/jweixin-1.2.0.js">
+      <publishTime>05/23/2020 09:32:52</publishTime>
+    </File>
+    <File Include="ShuoMing/说明文档 .docx">
+      <publishTime>07/29/2021 09:52:18</publishTime>
+    </File>
+    <File Include="Views/FaPiao/Index.cshtml">
+      <publishTime>08/04/2021 13:35:29</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/27/2021 09:44:24</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/04/2021 13:37:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

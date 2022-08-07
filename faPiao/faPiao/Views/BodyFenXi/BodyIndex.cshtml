@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>人体分析</title>
+    <script src="~/Scripts/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div>
+       <span onclick="body_analysis()">人体关键点识别</span>
+        </br>
+        <span>返回数据：</span>
+        </br>
+        <textarea id="FanHui" style="width: 80%; height: 400px">
+        </textarea> 
+    </div>
+
+    <script type="text/javascript">
+       
+        //人体关键点识别
+        function body_analysis() {
+            $.ajax({
+                url: "/BodyFenXi/body_analysis",
+                type: "post",
+                data: {
+
+                },
+                success: function (msg) {
+                    $("#FanHui").val(msg)
+                }
+            })
+        }
+        </script>
+</body>
+</html>
